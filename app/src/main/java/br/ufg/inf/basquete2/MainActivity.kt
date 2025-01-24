@@ -34,13 +34,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val botaoReset: Button = findViewById(id.bt_reset)
 
         scoreA = findViewById(id.tv_placarA)
         scoreB = findViewById(id.tv_placarB)
-        val botaoReset: Button = findViewById(id.bt_reset)
-        btn3pto = findViewById(id.bt_3pto)
-        btn2pto = findViewById(id.bt_2pto)
-        btn1pto = findViewById(id.bt_1pto)
+
+        btn3pto = findViewById(R.id.bt_3pto)
+        btn2pto = findViewById(R.id.bt_2pto)
+        btn1pto = findViewById(R.id.bt_1pto)
+
         btn3ptoB =  findViewById(id.bt_3ptoB)
         btn2ptoB = findViewById(id.bt_2ptoB)
         btn1ptoB = findViewById(id.bt_1ptoB)
@@ -84,10 +86,10 @@ class MainActivity : AppCompatActivity() {
             ptsA += points
             placar.text = ptsA.toString()
         }
-        else if (placar.id == R.id.tv_placarB)
+        else if (placar.id == R.id.tv_placarB) {
             ptsB += points
             placar.text = ptsB.toString()
-
+        }
     }
 
 
